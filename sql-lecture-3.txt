@@ -37,11 +37,16 @@ update tree set name='khushi',age=36 where age=34
 update tree set name=null where age=36
 
 update tree set name='khushi' where age=36
+
+update tree set name='hero' where age>=45
+
+update tree set age=25 where income>=20000
 --------------------------is null,is not null
 select * from tree where name is null
 
 select * from tree where name is not null
 
+select*from tree  order by age desc
 ------------------alter add column
 select * from tree
 
