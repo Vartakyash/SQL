@@ -1,0 +1,105 @@
+CREATE TABLE personal_details
+(
+sr_no int primary key,
+  name VARCHAR(50),
+  gender varchar(10),
+  age int
+)
+
+select*from personal_details
+
+insert into personal_details (sr_no,name,gender,age)VALUES
+(1,'yash','Male',21),
+(2,'ash','Male',21),
+(3,'john','Male',21),
+(4,'sophia','Female',21);
+
+delete personal_details where sr_no=4
+
+delete personal_details
+
+-------------truncate
+
+select*from personal_details
+
+truncate table personal_details
+
+-----------drop table
+drop table personal_details
+
+-----------if,else
+declare @w varchar
+set @ W='Hansa'
+print(@W)
+
+declare @ W varchar(100)
+set @ W='Hansa'
+print (@W+'School')
+
+declare @ W varchar(100)
+set @ W='Hansa'
+print concat (@W,'School',201)
+
+-----------if else
+declare @ age int
+set @ age = 18
+
+if(@age > 18)
+  print('you are eligible')
+else
+  print('you are not eligible')
+
+-------else if
+declare @ age int
+set @age = 18
+
+if(@age > 18 )
+  print('you are eligible')
+else if(@age=18)
+  print('next year')
+else
+print('you are not eligible')
+
+-----begin end
+
+declare @ age int
+set@age=18
+
+if(@age>18)
+begin
+  print('you are eligible')
+  print('Nitin')
+end
+else if @age=18
+begin
+  print('Next year')
+  print('Nitin')
+end
+else
+begin
+  print('you are not elligible')
+  print('Nitin')
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
