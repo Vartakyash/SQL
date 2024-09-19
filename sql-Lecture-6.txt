@@ -30,7 +30,7 @@ truncate table personal_details
 drop table personal_details
 
 -----------if,else
-declare @w varchar
+declare @w varchar(100)
 set @ W='Hansa'
 print(@W)
 
