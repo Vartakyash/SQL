@@ -83,6 +83,28 @@ begin
   print('you are not elligible')
   print('Nitin')
 end
+-------------------------using and condition
+declare @age int
+declare @income int
+
+set @age=17
+set @income=17000
+
+if(@age>18 and @income>19000)
+begin
+  print('you are eligible')
+  print('Nitin')
+end
+else if @age=18 and @income=19000
+begin
+  print('Next year')
+  print('Nitin')
+end
+else
+begin
+  print('you are not elligible')
+  print('Nitin')
+end
 
 
 
