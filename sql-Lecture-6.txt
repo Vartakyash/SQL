@@ -1,4 +1,4 @@
-CREATE TABLE personal_details
+  CREATE TABLE personal_details
 (
 sr_no int primary key,
   name VARCHAR(50),
@@ -65,8 +65,8 @@ print('you are not eligible')
 
 -----begin end
 
-declare @ age int
-set@age=18
+declare @age int
+set @age=18
 
 if(@age>18)
 begin
