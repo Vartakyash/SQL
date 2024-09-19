@@ -36,7 +36,7 @@ print(@W)
 
 declare @ W varchar(100)
 set @ W='Hansa'
-print (@W+'School')
+print (@W+' School')
 
 declare @ W varchar(100)
 set @ W='Hansa'
