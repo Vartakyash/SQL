@@ -105,6 +105,14 @@ begin
   print('you are not elligible')
   print('Nitin')
 end
+-------------------------
+declare @x int
+set @x = 17
+
+if (@x % 2 = 0)
+	print('It is an even number')  
+else
+	print('It is an odd number')
 
 
 
