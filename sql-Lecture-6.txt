@@ -22,6 +22,8 @@ delete personal_details
 
 select*from personal_details
 
+-----------------------DELETE is a SQL command that removes one or multiple rows from a table using conditions. TRUNCATE is a SQL -----------------------------command that removes all the rows from a table without using any condition.
+
 truncate table personal_details
 
 -----------drop table
