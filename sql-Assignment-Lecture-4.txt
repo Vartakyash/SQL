@@ -37,12 +37,13 @@ insert into fk values
 (3,'Tcs',103,'Mumbai','Engineer')
 (4,'Itech',104,'Mumbai','Engineer')
 
- create table fky
-  (
+
+create table fky
+ (
    Info varchar(100), 
    Leaves int,
    Code int foreign key references fk(Code);----fk(Code) is used because we have used Code as primary key in table fk
-  )
+ )
 
 insert into fky values
 ('Fresher',1,101),
