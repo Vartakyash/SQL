@@ -40,6 +40,15 @@ insert into fk values
  create table fky
   (
    Info varchar(100), 
-   Leave varchar(100),
-   Code int foreign key references fk(Code);
+   Leaves int,
+   Code int foreign key references fk(Code);----fk(Code) is used because we have used Code as primary key in table fk
   )
+
+insert into fky values
+('Fresher',1,101),
+('Fresher',2,102),
+('Experienced',3,103),
+('Fresher',4,104);
+
+
+select*from fky
