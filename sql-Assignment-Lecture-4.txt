@@ -37,9 +37,9 @@ insert into fk values
 (3,'Tcs',103,'Mumbai','Engineer')
 (4,'Itech',104,'Mumbai','Engineer')
 
- create table pky
+ create table fky
   (
    Info varchar(100), 
    Leave varchar(100),
-   Code ;
+   Code int foreign key references fk(Code);
   )
