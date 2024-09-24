@@ -48,20 +48,20 @@ name varchar(20)
 
 select * from pr
 
-drop table pr
+drop table pr---
 
 insert into pr values
 (1,'ram'),
 (2,'vishnu'),
 (3,'shiva')
 
-drop table foren
+
 
 create table foren
 (
 roll int foreign key references pr(roll)
----on delete cascade,
-on update cascade,
+on delete cascade,
+---on update cascade,
 name varchar(20)
 )
 
@@ -70,7 +70,7 @@ insert into foren values
 (2,'ram'),
 (3,'vishnu')
 
-drop table foren
+drop table foren---
 
 select * from pr
 select * from  foren
@@ -104,8 +104,8 @@ drop table foren
 create table foren
 (
 roll int foreign key references pr(roll)
-----on delete set null,
-on update set null,
+on delete set null,
+----on update set null,
 name varchar(20)
 )
 
@@ -144,8 +144,8 @@ drop table foren
 create table foren
 (
 roll int default 3 foreign key references pr(roll)
----on delete set default,
-on update set default,
+on delete set default,
+---on update set default,
 name varchar(20)
 )
 
@@ -157,7 +157,7 @@ insert into foren values
 select * from pr
 select * from foren
 
-----Here after deleting the roll=2 will be replaced with default roll=3 in primary key and foreign key
+----Here after deleting the roll=2 in primary key ,roll=2 in  foreign key will become roll=3 in foreign key
 delete pr where roll=2----After deleting, the primary table is affected we need to restore it as previous table
 
 update pr set roll=5 where roll=2
