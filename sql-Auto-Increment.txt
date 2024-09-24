@@ -1,0 +1,22 @@
+create database yashvartak
+
+use yashvartak
+
+CREATE TABLE Persons (
+    Personid int IDENTITY(10,5) PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+INSERT INTO Persons (FirstName,LastName)VALUES 
+('Lars','Monsen'),
+('yash','vartak'),
+('yash','vartak'),
+('yash','vartak'),
+('yash','vartak')
+
+select * from Persons
+
+drop table Persons
+truncate  table Persons
