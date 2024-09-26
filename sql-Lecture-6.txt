@@ -124,8 +124,9 @@ else
 
 ---------------------------vowel consonant
 declare @x varchar(100)
-set @x='A'
+set @x='B'
 if(@x='a' or @x='e' or @x='i' or @x='o' or @x='u')
 	print('It is a  vowel.')
-else
+
+else IF (@x != 'a' AND @x != 'e' AND @x != 'i' AND @x != 'o' AND @x != 'u' AND @x BETWEEN 'a' AND 'z')
 	print('It is a consonant.')
