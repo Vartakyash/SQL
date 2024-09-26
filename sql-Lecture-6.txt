@@ -105,7 +105,7 @@ begin
   print('you are not elligible')
   print('Nitin')
 end
--------------------------
+-------------------------even odd
 declare @x int
 set @x = 17
 
@@ -113,14 +113,16 @@ if (@x % 2 = 0)
 	print('It is an even number')  
 else
 	print('It is an odd number')
---------------------------
+
+--------------------------positive negative
 declare @x int
 set @x=-0.1
 if(@x>0)
 	print('It is an positive number')
 else
 	print('It is an negative number')
----------------------------
+
+---------------------------vowel consonant
 declare @x varchar(100)
 set @x='A'
 if(@x='a' or @x='e' or @x='i' or @x='o' or @x='u')
