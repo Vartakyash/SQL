@@ -73,7 +73,7 @@ CREATE TABLE xyz
     Name varchar(100),
     income float,
 ----Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
-	Time VARCHAR(40) DEFAULT FORMAT(GETDATE(),'dd:MMMM:yy HH:mm')
+    Time VARCHAR(40) DEFAULT FORMAT(GETDATE(),'dd:MMMM:yy HH:mm')
 ----Time DATETIME DEFAULT GETDATE() 
 );
 
