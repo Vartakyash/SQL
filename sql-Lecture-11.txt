@@ -1,0 +1,50 @@
+create database yashvartak
+
+use yashvartak
+
+CREATE TABLE xyz
+(
+    ROLL int,
+    Name varchar(100),
+    income float,
+	
+);
+
+DROP TABLE  xyz;
+
+SELECT * FROM xyz;
+
+-- Insert a record into the table
+INSERT INTO xyz (ROLL, Name, income) VALUES 
+(1, 'kajal', 2000),
+(2,'rajesh',3000),
+(3,'guts',3000),
+(4,'yash',3000),
+(5,'sameer',3000),
+(6,'jayesh',3000)
+
+CREATE TABLE abc
+(
+    roll_id int,
+    Name varchar(100),
+    income float,
+	
+);
+
+drop table abc
+
+INSERT INTO abc (roll_id, Name, income) VALUES 
+(1, 'jal', 8000),
+(2,'raj',13000),
+(3,'guyhgvbts',1000),
+(4,'ash',2000),
+(5,'sam',4000),
+(6,'jay',5000)
+
+select * from abc
+truncate table abc
+
+select * from xyz as a
+join abc as b
+on a.roll=b.roll_id
+
