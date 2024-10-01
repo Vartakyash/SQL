@@ -74,7 +74,7 @@ CREATE TABLE xyz
     income float,
 ----Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
 	Time VARCHAR(40) DEFAULT FORMAT(GETDATE(),'dd:MMMM:yy HH:mm')
------ Time DATETIME DEFAULT GETDATE() 
+----Time DATETIME DEFAULT GETDATE() 
 );
 
 DROP TABLE  xyz;
