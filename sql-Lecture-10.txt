@@ -72,7 +72,8 @@ CREATE TABLE xyz
     ROLL int,
     Name varchar(100),
     income float,
-     Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
+    Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
+----- Time DATETIME DEFAULT GETDATE() 
 );
 
 DROP TABLE  xyz;
