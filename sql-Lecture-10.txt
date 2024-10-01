@@ -72,7 +72,8 @@ CREATE TABLE xyz
     ROLL int,
     Name varchar(100),
     income float,
-    Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
+----Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
+	Time VARCHAR(40) DEFAULT FORMAT(GETDATE(),'dd:MMMM:yy HH:mm')
 ----- Time DATETIME DEFAULT GETDATE() 
 );
 
@@ -89,5 +90,6 @@ INSERT INTO xyz (ROLL, Name, income) VALUES
 (5,'sameer',3000),
 (6,'jayesh',3000)
 
-
+INSERT INTO xyz (ROLL, Name, income) VALUES 
+(7,'darshit',3000)
 
