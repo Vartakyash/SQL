@@ -1,3 +1,5 @@
+create database yashvartak
+
 use yashvartak
 
 select GETDATE()
@@ -70,7 +72,7 @@ CREATE TABLE xyz
     ROLL int,
     Name varchar(100),
     income float,
-    Time DATETIME 
+     Time VARCHAR(20) DEFAULT FORMAT(GETDATE(), 'dddd:MM:yy')  
 );
 
 DROP TABLE  xyz;
@@ -78,25 +80,13 @@ DROP TABLE  xyz;
 SELECT * FROM xyz;
 
 -- Insert a record into the table
-INSERT INTO xyz (ROLL, Name, income, Time)VALUES 
-(1, 'kajal', 2000, GETDATE()),
-(2,'rajesh',3000, GETDATE()),
-(3,'guts',3000, GETDATE()),
-(4,'yash',3000, GETDATE()),
-(5,'sameer',3000, GETDATE())
+INSERT INTO xyz (ROLL, Name, income) VALUES 
+(1, 'kajal', 2000),
+(2,'rajesh',3000),
+(3,'guts',3000),
+(4,'yash',3000),
+(5,'sameer',3000),
+(6,'jayesh',3000)
 
--------Table in time format
-SELECT ROLL, Name,income, FORMAT(Time, 'dddd:MMMM:yy') AS FormattedTime FROM xyz;
 
-SELECT ROLL, Name,income, FORMAT(Time, 'dd:MMMM:yy') AS FormattedTime FROM xyz;
-
-SELECT ROLL, Name,income, FORMAT(Time, 'dd:MM:yy') AS FormattedTime FROM xyz;
-
--------Table in time format where ROLL=2
-
-SELECT ROLL, Name,income, FORMAT(Time, 'dddd:MMMM:yy') AS FormattedTime FROM xyz WHERE ROLL = 2;
-
-SELECT  FORMAT(Time, 'dd:MMMM:yy') AS FormattedTime FROM xyz WHERE ROLL = 2;
-
-SELECT ROLL, Name,income, FORMAT(Time, 'dd:MM:yy') AS FormattedTime FROM xyz WHERE ROLL = 2;
 
