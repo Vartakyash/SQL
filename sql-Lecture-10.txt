@@ -91,5 +91,5 @@ INSERT INTO xyz (ROLL, Name, income) VALUES
 (6,'jayesh',3000)
 
 INSERT INTO xyz (ROLL, Name, income) VALUES 
-(7,'darshit',3000)
+(7,'Darshit',3000)
 
