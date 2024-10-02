@@ -16,12 +16,12 @@ SELECT * FROM xyz;
 
 -- Insert a record into the table
 INSERT INTO xyz (ROLL, Name, income) VALUES 
-(1, 'kajal', 2000),
-(2,'rajesh',3000),
-(3,'guts',3000),
-(4,'yash',3000),
-(5,'sameer',3000),
-(6,'jayesh',3000)
+(1, 'a', 2000),
+(2,'b',3000),
+(3,'c',3000),
+(4,'d',3000),
+(7,'e',3000),
+(8,'f',3000)
 
 CREATE TABLE abc
 (
@@ -38,8 +38,8 @@ INSERT INTO abc (roll_id, Name, income) VALUES
 (2,'raj',13000),
 (3,'guyhgvbts',1000),
 (4,'ash',2000),
-(5,'sam',4000),
-(6,'jay',5000)
+(9,'sam',4000),
+(10,'jay',5000)
 
 select * from abc
 truncate table abc
@@ -48,3 +48,35 @@ select * from xyz as a
 join abc as b
 on a.roll=b.roll_id
 
+select * from xyz as a
+inner join abc as b
+on a.roll=b.roll_id
+
+--------------
+select * from xyz as a
+right join abc as b
+on a.roll=b.roll_id
+
+select * from xyz as a
+right outer join abc as b
+on a.roll=b.roll_id
+
+-------------
+
+select * from xyz as a
+left join abc as b
+on a.roll=b.roll_id
+
+select * from xyz as a
+left outer join abc as b
+on a.roll=b.roll_id
+
+------------
+
+select * from xyz as a
+full join abc as b
+on a.roll=b.roll_id
+
+select * from xyz as a
+full outer join abc as b
+on a.roll=b.roll_id
