@@ -15,8 +15,8 @@ start with 1
 increment by 5
 
 insert into yash values
-(next valur FOR how,'A'),
-(next valur FOR how,'B');
+(next value FOR how,'A'),
+(next value FOR how,'B');
 
 --------------identity
 
