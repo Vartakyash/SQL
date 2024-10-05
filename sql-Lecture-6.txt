@@ -34,9 +34,9 @@ declare @W varchar(100)
 set @W = 'Hansa'
 print(@W)
 
-DECLARE @t INT
-SET @t = 40
-PRINT('Name: ' + CAST(@t AS VARCHAR(10)))
+declare @W int
+set @W=42
+print concat (@W,' yash')
 
 
 declare @W varchar(100)
