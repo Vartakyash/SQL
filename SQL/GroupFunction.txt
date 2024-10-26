@@ -1,7 +1,8 @@
 ---------------------------------group function aggregate function-----------------
+create database teacher
 use teacher
 select * from emp
-
+drop table emp
 CREATE TABLE emp (
     emp_id INT PRIMARY KEY,
     ename VARCHAR(50),
@@ -29,6 +30,9 @@ select * from emp
 
 select deptno,sum(sal)"total salary" from emp group by deptno
 
+SELECT deptno, SUM(sal) AS "total salary" FROM emp WHERE deptno = 10 GROUP BY deptno;----------------
+
+
 select deptno,max(sal)"max salary" from emp group by deptno
 
 select deptno,min(sal)"min salary" from emp group by deptno
@@ -39,9 +43,28 @@ select deptno,count(sal)"count salary" from emp group by deptno-------The query 
 
 SELECT deptno, SUM(sal) AS "total sal", MAX(sal) AS "max",  MIN(sal) AS "min",COUNT(sal) AS "count" FROM emp GROUP BY deptno;
 
-select deptno,ename,sum(sal)"total salary" from emp group by ename,deptno
+
+
+
+SELECT deptno, ename, sal,SUM(sal) OVER (PARTITION BY deptno) AS "total salary" FROM emp;
+
+
+
+---------
+SELECT deptno, ename, sal,
+    CASE 
+        WHEN ROW_NUMBER() OVER (PARTITION BY deptno ORDER BY ename) = 1 
+        THEN SUM(sal) OVER (PARTITION BY deptno) 
+        ELSE NULL 
+    END AS "total salary"
+FROM emp;
+
+
+
+
+
 ------------------having--------------------
 
 select deptno,sum(sal)"total salary" from emp group by deptno having sum(sal)>=17000
 
-select deptno,max(sal)"max salary" from emp group by deptno having max(sal)<=9000
+select deptno,max(sal)"max salary" from emp group by deptno having max(sal)<=8000
