@@ -1,0 +1,25 @@
+create database yash
+
+use yash
+
+create table people
+(
+Name varchar(50),
+Age int,
+Gender varchar(10),
+Income Decimal(10,2)
+)
+
+insert into people(Name,Age,Gender,Income) values
+('Alice',28,'Female',60000),
+('Bob',34,'Male',75000),
+('Charlie',22,'Male',50000),
+('Diana',45,'Female',85000),
+('Ethan',38,'Male',72000),
+('Fiona',37,'Female',64000),
+('George',40,'Male',95000),
+('Hannah',35,'Female',78000),
+('Ian',29,'Male',67000),
+('Julia',38,'Female',88000)
+
+select * from people
