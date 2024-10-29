@@ -1,3 +1,4 @@
+
 create database yash
 
 use yash
@@ -23,3 +24,47 @@ insert into people(Name,Age,Gender,Income) values
 ('Julia',38,'Female',88000)
 
 select * from people
+
+----sp store procedure
+
+create procedure d
+as
+begin
+	print('Good')
+end
+d
+-------------------
+alter procedure d
+as
+begin
+	select * from people
+end
+
+execute d
+exec d
+d
+-------------------
+create proc ne
+as
+begin
+	select * from people where Gender='Male'
+	select * from people where Age>25
+end
+ne
+---------------------
+
+create proc nej
+@t varchar (100),
+@n int
+as
+begin
+	select * from people where Gender=@t
+	select * from people where Age>@n
+end
+
+DROP PROCEDURE nej;
+SELECT * FROM people WHERE Age >= 30;  -- To see entries with Age <= 30
+
+nej 'Female', 30;---will show two table one where all Gender is Female and other where Age is greater than 30 
+nej 'Male', 34;
+nej 'Female', 34; -- you can call it with different parameters as needed
