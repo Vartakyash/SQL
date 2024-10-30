@@ -1,4 +1,3 @@
-
 CREATE DATABASE yash
 USE yash
 CREATE TABLE TestTable
@@ -35,3 +34,13 @@ select * from TestTable
 
 INSERT INTO TestTable( ID, Value ) VALUES  
 ( 4, 40)
+
+   -- this will rollback to the savepoint right after the first INSERT was done
+ROLLBACK TRANSACTION s1
+
+select * from TestTable
+
+-- this will commit the transaction leaving just the first INSERT 
+COMMIT
+ 
+SELECT * FROM TestTable
