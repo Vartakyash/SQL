@@ -1,0 +1,50 @@
+create function areacircle(@r float)
+returns float as
+begin
+return (3.14* @r * @r)
+end
+SELECT dbo.areacircle(8.0) AS "Area_of_circle"
+
+---------------------------------------------------
+create function rect(@len float,@brd float)
+returns float as
+begin
+return (@len * @brd)
+end
+SELECT dbo.rect(7,5) AS "Area_of_Rectangle"
+----------------------------------------------------
+
+drop function eveoddnumber
+
+create function eveoddnumber(@n int)
+returns char(100) as
+begin
+DECLARE @return_value CHAR(100);
+	SET @return_value = '';
+    IF (@n % 2=0) SET @return_value = 'Even number';
+    IF (@n % 2!=0) SET @return_value = 'Odd number';
+    RETURN @return_value
+END
+
+Select dbo.eveoddnumber(10) as "Even Or Odd"
+
+--------------------------------------------------
+drop function greater
+
+CREATE FUNCTION greater(@a INT, @b INT)
+RETURNS NVARCHAR(100) AS
+BEGIN
+    DECLARE @result NVARCHAR(100);
+    
+    IF (@a > @b)
+        SET @result = CONCAT(@a, ' is greater than ', @b);
+    ELSE IF (@b > @a)
+        SET @result = CONCAT(@b, ' is greater than ', @a);
+    ELSE
+        SET @result = 'Both numbers are equal';
+    
+    RETURN @result;
+END;
+
+SELECT dbo.greater(10, 20) AS "Comparison Result";
+
