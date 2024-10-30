@@ -63,8 +63,22 @@ begin
 end
 
 DROP PROCEDURE nej;
-SELECT * FROM people WHERE Age >= 30;  -- To see entries with Age <= 30
 
-nej 'Female', 30;---will show two table one where all Gender is Female and other where Age is greater than 30 
-nej 'Male', 34;
-nej 'Female', 34; -- you can call it with different parameters as needed
+
+nej 'Female', 30;---Will show two table one where all Gender is Female and other where Age is greater than 30 
+nej 'Male', 34;--Will show two table one where all Gender is Male and other where Age is greater than 34 
+nej 'Female', 34;--Will show two table one where all Gender is Female and other where Age is greater than 34
+
+create proc df
+@t varchar(100)='Male',-------Gender will be taken Male by default
+@n int = 20
+as
+begin
+	select * from people where Gender=@t
+	select * from people where Age>@n
+end
+df 'Female',30
+drop proc df
+df 
+-----When we use only df it is taking 'Male',20 by  default and 
+----showing two tables where one has all Gender as Male and other has Age above 20
