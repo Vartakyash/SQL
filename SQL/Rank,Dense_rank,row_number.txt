@@ -18,7 +18,14 @@ INSERT INTO employee (id, name, sal, dname) VALUES
 (7, 'suzzan', 900000, 'HR'),
 (8, 'tom', 100000, 'IT');
 
-select * from employee
+-----------------------------------------------------------------------
+select*from employee
+select sum(sal) from employee
+select sum(sal) over() from employee
+select *, sum(sal) over() from employee
+select *, sum(sal) over() as Total from employee
+select *, sum(sal) over(partition by dname) as Total from employee
+-----------------------------------------------------------------------
 
 ---rank()-(Count the repeated number in rank)--
 
