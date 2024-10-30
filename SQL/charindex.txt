@@ -1,0 +1,34 @@
+CREATE TABLE Users (
+    Id INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100)
+);
+INSERT INTO Users (Id, FirstName, LastName, Email) VALUES
+(1, 'Sam', 'Sony', 'Sam@aaa.com'),
+(2, 'Ram', 'Barber', 'Ram@aaa.com'),
+(3, 'Sara', 'Sanosky', 'Sara@ccc.com'),
+(4, 'Todd', 'Gartner', 'Todd@bbb.com'),
+(5, 'John', 'Grover', 'John@aaa.com'),
+(6, 'Sana', 'Lenin', 'Sana@ccc.com'),
+(7, 'James', 'Bond', 'James@bbb.com'),
+(8, 'Rob', 'Hunter', 'Rob@ccc.com'),
+(9, 'Steve', 'Wilson', 'Steve@aaa.com'),
+(10, 'Pam', 'Broker', 'Pam@bbb.com');
+
+--select * from Users
+
+---Select LEFT('ABCDE', 3)
+
+---Select RIGHT('ABCDE', 3)
+
+Select CHARINDEX('@','sara@aaa.com',1)
+---In this example, we get the position of '@'
+--character in the email string 'sara@aaa.com'
+--which is 5.
+
+
+
+
+
+
