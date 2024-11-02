@@ -48,3 +48,41 @@ END;
 
 SELECT dbo.greater(10, 20) AS "Comparison Result";
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE tblEmployees
+(
+Id INT IDENTITY(1, 1) PRIMARY KEY NOT NULL,
+Name NVARCHAR(50),
+DateOfBirth DATETIME,
+Gender NVARCHAR(50),
+DepartmentId INT
+);
+
+INSERT INTO tblEmployees
+VALUES ('Sam', '1980-12-30', 'Male', 1)
+
+INSERT INTO tblEmployees
+VALUES ('Pam', '1982-09-01 12:02:36.260', 'Female', 2)
+
+INSERT INTO tblEmployees
+VALUES ('John', '1985-08-22 12:03:30.370', 'Male', 1)
+
+INSERT INTO tblEmployees
+VALUES ('Sara', '1979-11-29 12:59:30.670', 'Female', 3)
+
+INSERT INTO tblEmployees
+VALUES ('Todd', '1978-11-29 12:59:30.670', 'Male', 1)
+
+
+select * from tblEmployees
+
+CREATE FUNCTION fn_EmployeesByGender(@Gender nvarchar(10))
+RETURNS TABLE
+AS
+RETURN (Select Id, Name, DateOfBirth, Gender, DepartmentId
+      from tblEmployees
+      where Gender = @Gender)
+
+Select * from fn_EmployeesByGender('Male')
+
