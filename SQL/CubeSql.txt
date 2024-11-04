@@ -31,11 +31,13 @@ GROUP BY
     GROUPING SETS
     (
          (Country, Gender),
-         (Country),----Here Gender will be unordered and Country will be given first preference
+         (Country),----Here Country will be given first preference
          ()---Total salary of everyone 
     )
 
 ------Run both queries(Country),(Gender) at same time to get better understanding
+
+select * from Employees----------------There is only one male and female in each country
 
 SELECT Country, Gender, SUM(Salary) AS TotalSalary
 FROM Employees
@@ -43,12 +45,12 @@ GROUP BY
     GROUPING SETS
     (
          (Country, Gender),
-         (Gender),----Here Country will be unordered and Gender will be given first preference
+         (Gender),----Here Gender will be given first preference
          ()---Total salary of everyone 
     )
 
 
-
+select * from Employees----------------There is only one male and female in each country
 
 SELECT Country, Gender, SUM(Salary) AS TotalSalary
 FROM Employees
@@ -57,8 +59,8 @@ GROUP BY
     (
          (Country, Gender),
 		 (Country),
-         (Gender)
-         ---Total salary of everyone 
+         (Gender),
+		 ()---Total salary of everyone 
     )
 
 SELECT Country, Gender, SUM(Salary) AS TotalSalary
