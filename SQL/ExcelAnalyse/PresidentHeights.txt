@@ -1,0 +1,31 @@
+create database xyz
+
+use xyz
+
+select * from PresidentHeights
+
+SELECT COUNT(*) AS Total_PresidentHeights FROM PresidentHeights;
+
+SELECT AVG([height(cm)]) AS Average_Value FROM PresidentHeights;
+
+SELECT MAX([height(cm)]) AS Max_Value, MIN([height(cm)]) AS Min_Value FROM PresidentHeights;
+
+SELECT name, [height(cm)]
+FROM PresidentHeights
+WHERE [height(cm)] > (SELECT AVG([height(cm)]) FROM PresidentHeights);
+
+
+SELECT 
+    CASE 
+		WHEN [height(cm)] < 170 THEN '169 and below'
+        WHEN [height(cm)] BETWEEN 170 AND 180 THEN '170-180'
+        WHEN [height(cm)] BETWEEN 181 AND 190 THEN '181-190'
+        WHEN [height(cm)] > 190 THEN '191 and above'
+    END AS Value_Range,
+    COUNT(*) AS Count
+FROM PresidentHeights
+GROUP BY [height(cm)];
+
+
+
+
