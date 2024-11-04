@@ -2,7 +2,7 @@ create database xyz
 
 use xyz
 
-----Right click on database xyz then click on task then import data click on data souce as microsoft excel
+----Right click on database xyz then click on task then import data click on data source as microsoft excel
 
 ------https://learn.microsoft.com/en-us/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-ver16
 
