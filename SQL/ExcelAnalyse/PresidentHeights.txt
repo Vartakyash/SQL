@@ -33,7 +33,7 @@ WHERE [height(cm)] > (SELECT AVG([height(cm)]) FROM PresidentHeights);
 
 SELECT 
     CASE 
-		WHEN [height(cm)] < 170 THEN '169 and below'
+	WHEN [height(cm)] < 170 THEN '169 and below'
         WHEN [height(cm)] BETWEEN 170 AND 180 THEN '170-180'
         WHEN [height(cm)] BETWEEN 181 AND 190 THEN '181-190'
         WHEN [height(cm)] > 190 THEN '191 and above'
